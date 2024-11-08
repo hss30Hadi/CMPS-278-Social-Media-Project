@@ -1,0 +1,156 @@
+/* Universal Styles */
+* {
+    font-family: cursive;
+}
+
+body {
+    background-color: rgb(236, 235, 235);
+    margin: 0; /* Reset default margin */
+    padding: 0;
+    border-top-left-radius: 20px;
+}
+
+/* Container for sidebar and friends section */
+.page-container {
+    display: flex;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #FCF4C3; /* Semi-transparent for contrast */
+    color: black;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #f7ea95;
+}
+
+/* Left Sidebar */
+.leftsidebar {
+    width: 225px;
+    background-color: #FCF4C3;
+    color: #000000;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    /* border: 10px solid black; */
+    position: fixed; /* Keeps sidebar fixed on the left */
+    left: 0;
+    top: 0;
+    z-index: 1000; /* Ensures sidebar is on top of other elements */
+}
+
+.leftsidebar img {
+    width: 160px;
+    height: 140px;
+}
+
+.leftsidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.leftsidebar ul li {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.leftsidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.leftsidebar ul li a:hover,
+.leftsidebar ul li a.active {
+    background-color: #f7ea95;
+}
+
+/* Friends Section */
+.friends-section {
+    padding: 2rem;
+    margin-left: 245px; /* Adjust for sidebar width + border */
+    margin-top: 4rem; /* Space for navbar */
+    text-align: center;
+    flex-grow: 1; /* Takes remaining space */
+}
+
+/* All Friends Heading */
+.friends-section h1 {
+    color: black;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+}
+
+/* Friends Grid Layout */
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Limits columns to a maximum of 3 */
+    gap: 3rem; /* Adjusted gap for a balanced layout */
+    padding: 1rem;
+    max-width: 900px; /* Constrains grid to fit 3 columns max */
+    margin: 0 auto; /* Centers the grid on the page */
+}
+
+/* Friend Card Styling */
+.friend-card {
+    box-shadow: 12px 16px rgba(0, 0, 0, 0.1);
+    background-image: url('/public/resources/searchBackground.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Light shadow for readability */
+    width: 100%;
+    max-width: 250px;
+    padding-bottom: 120px;
+    margin: 0 auto; /* Centers each card within its grid cell */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.friend-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+/* Friend Photo */
+.friend-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.4rem;
+    border: 2px solid #fff; /* White border for contrast */
+}
+
+/* Friend Name */
+.friend-name {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+}
