@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+
+  overflow: hidden;
+}
+
+
+.sidebar {
+    width: 200px;
+    background-color: #FCF4C3;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+}
+
+.sidebar img{
+    width: 160px;
+    height: 140px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #f7ea95;
+}
+
+
+.profile-content {
+  flex: 1;
+  margin-left: 200px; /* Adjust to the width of your sidebar */
+  padding: 20px; /* Optional: adds some spacing around the content */
+}
+
+
+.profile-container {
+  width: 100%;
+  background-color: #fcf4c3;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-bottom: 3px solid #ddd;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-picture img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+  gap:90px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.count {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.edit-button {
+  background-color: #96830a;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  width: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  float: right;
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+
+.edit-button:hover {
+  background-color: #dad718;
+}
+
+.posts-section {
+  padding: 30px;
+}
+
+.posts-section h2 {
+  margin-bottom: 100px;
+}
+
+.posts-placeholder {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+}

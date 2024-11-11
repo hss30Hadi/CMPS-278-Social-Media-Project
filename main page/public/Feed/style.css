@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: flex-start;
+    margin-left: 200px;
+}
+
+
+
+.sidebar {
+    width: 200px;
+    background-color: #FCF4C3;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+}
+
+.sidebar img{
+    width: 160px;
+    height: 140px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #f7ea95;
+}
+
+
+
+
+
+.feed {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.feed h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#profileButton {
+    padding: 10px 20px;
+    color: rgb(8, 8, 8);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#profileButton:hover {
+    background-color: #9ea5aa;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image-grid img {
+    width: 350px;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: transform 0.3s ease; 
+}
+
+.image-grid img:hover {
+    transform: scale(1.1); 
+}
+.toggle-reviews {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.reviews-list {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.review:last-child {
+    border-bottom: none; 
+}

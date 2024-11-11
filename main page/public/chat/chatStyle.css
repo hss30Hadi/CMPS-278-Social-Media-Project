@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(215, 210, 210);
+    background-image: url(logInBackground.jpg);
+    background-size: 1540px 730px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #000000;
+}
+
+button {
+    width: 100%;    
+    padding: 12px;
+    background-color: #5d5959;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3f3e3e;
+}
+
+/* Chat Page Styling */
+.chat-page-container {
+    display: flex;
+    height: 100vh;
+    width: 1315px;
+    background-color: #121212; 
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 25%;
+    background-color: #FCF4C3;
+    padding: 20px;
+    border: 10px solid black;
+    border-radius:20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.friend-list {
+    margin-top: 10px;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.friend-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friend-name {
+    font-weight: bold;
+    color: #000000;
+    
+}
+
+.status {
+    font-size: 0.8em;
+}
+
+/* Chat Section Styles */
+
+.chat-section {
+    width: 1050px;
+    background-color: #FCF4C3;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    border-radius: 20px;
+    border: 10px solid black ;
+}
+
+.chat-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    padding: 20px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.user-message {
+    text-align: left;
+    margin-left: auto; 
+    justify-content: flex-end;
+}
+
+.friend-message {
+    text-align: left;
+
+}
+
+.message-input {
+    display: flex;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    padding: 10px;
+}
+
+.message-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: #333;
+    height: 50px;
+    color: #ffffff;
+}
+
+.message-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+}
+/* Hover effect for friend elements */
+.friend:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/* Active effect for friend elements */
+.friend.active {
+    background-color: #c8c8c8; /* Darker grey to indicate active selection */
+}
+.friend {
+    display: flex; /* Makes the friend div a flex container */
+    align-items: center; /* Centers the items vertically */
+    padding: 10px; /* Adds padding for better spacing */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+    border-radius: 20px;
+}
+
+.friend-pic {
+    width: 40px; /* Fixed size for the profile picture */
+    height: 40px; /* Fixed size for the profile picture */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 8px; /* Adds spacing between the picture and the name */
+}
+
+
+
+.friend-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically if more than one line of text/info */
+    margin-top: 0px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.chat-header, .chat-messages, .message-input {
+    display: none; /* Hides these elements initially */
+}
+
+.chat-logo {
+    display: flex; /* Shows the logo initially */
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+}
+
+
+/* navigation sidebar style*/
+
+.leftsidebar {
+    width: 225px;
+    background-color: #FCF4C3;
+    color: #000000;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    border: 10px solid black;
+}
+
+
+.leftsidebar img{
+    width: 160px;
+    height: 140px;
+}
+
+.leftsidebar ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.leftsidebar ul li {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.leftsidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.leftsidebar ul li a:hover,
+.leftsidebar ul li a.active {
+    background-color: #f7ea95;
+}
+
+
+.user-message, .friend-message {
+    max-width: 40%; /* Limits the message width to 40% of the chat container */
+    margin-bottom: 10px; /* Adds space between messages */
+    padding: 5px 10px; /* Padding inside the message box */
+    word-wrap: break-word; /* Ensures that words will wrap and not overflow */
+    overflow-wrap: break-word; /* Ensures that overflow text wraps to the next line */
+    box-sizing: border-box; /* Includes padding and border in the width of the element */
+    border-radius: 8px; /* Adds rounded corners to the message boxes */
+    display: flex; /* Flexbox for alignment */
+    justify-content: flex-start; /* Align user messages to the right */
+    margin-bottom: 10px; /* Space between messages */
+}
+
+.chat-messages {
+    overflow-y: auto; /* Allows for vertical scrolling */
+    padding: 10px; /* Padding around the message area */
+    max-height: 700px; /* Sets a maximum height for the chat area */
+    width: 103%; /* Ensures the chat message area takes up the full width of its container */
+}
+
+/* Styling for the text within message containers */
+.user-message p, .friend-message p {
+    width: 90%;
+    padding: 5px 10px; /* Padding around text */
+    background-color: #75c3a4; /* Light blue background, customizable */
+    border-radius: 15px; /* Rounded corners for aesthetic */
+    word-wrap: break-word; /* Ensures that words wrap to prevent overflow */
+    overflow-wrap: break-word; /* Breaks words to avoid overflow */
+}
+.friend-message p{
+    background-color: #e0e0ff; 
+}
+
+.timestamp {
+    display: block;
+    font-size: 0.75em; 
+    color: #666666; 
+    margin-left: 5px; 
+    text-align: right;
+}
+
+

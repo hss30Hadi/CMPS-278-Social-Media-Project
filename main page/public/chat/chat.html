@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodies Chat</title>
+    <link rel="stylesheet" href="chatStyle.css" />
+  </head>
+  <body>
+    <nav class="leftsidebar">
+      <img src="../resources/logo1.jpg" alt="logo" />
+      <ul>
+        <li><a href="../Feed/feed.html">Home</a></li>
+        <li><a href="chat.html" class="active">Chat</a></li>
+        <li>
+          <a href="../Friends/allMyFriendsPage/allMyFriendsPage.html"
+            >Friends</a
+          >
+        </li>
+        <li><a href="../Profile/profilePage.html">Profile</a></li>
+        <li><a href="#">Create</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </nav>
+
+    <div class="chat-page-container">
+      <!-- Left Sidebar: Friends List -->
+      <div class="sidebar">
+        <div class="profile-header">
+          <img
+            src="../resources/logo2.jpg"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+          <h3>Username</h3>
+        </div>
+        <h4>Messages</h4>
+        <div class="friend-list">
+          <div class="friend">
+            <img
+              src="../resources/logo2.jpg"
+              alt="friendpp"
+              class="friend-pic"
+            />
+            <div>
+              <p class="friend-name">Hadi</p>
+            </div>
+          </div>
+          <!-- Repeat for other friends -->
+          <div class="friend">
+            <img
+              src="../resources/logo1.jpg"
+              alt="friendpp"
+              class="friend-pic"
+            />
+            <div>
+              <p class="friend-name">Mohammad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Chat Section -->
+      <!-- Right Chat Section -->
+      <div class="chat-section">
+        <div class="chat-header">
+          <h3></h3>
+        </div>
+        <div class="chat-messages">
+          <!-- Initially empty; messages will go here -->
+        </div>
+        <div class="chat-logo" style="display: block; text-align: center">
+          <h1 style="margin-top: 50px; font-family: cursive">Chat Page</h1>
+          <img src="../resources/logo2.jpg" alt="logo" />
+        </div>
+        <form class="message-input" onsubmit="return sendMessage(event)">
+          <input type="text" id="message-input" placeholder="Message..." />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="chatScript.js"></script>
+  </body>
+</html>
